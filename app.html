@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<title>Sonnet</title>
+
+<body background="logo.png";>
+<div style="text-align: center; ">
+<button OnClick=" location.href='Calendar.html' ">
+Calendar
+</button>
+<button OnClick=" location.href='chat.html' ">Chat</button>
+<button OnClick=" location.href='Music.html'">Music</button>
+<button OnClick=" location.href='Tips.html' ">StudyTips</button>
+<button onclick="notify()">Notify</button>
+
+<script>
+function notify(){
+
+if (Notification.permission !== "granted") {
+Notification.requestPermission();
+}
+ else{
+var notification = new Notification('HW:', {
+  body: "Math and English",
+});
+notification.onclick = function () {
+  window.open("http://google.com");
+};
+}
+}
+</script>
+<style>
+body {
+	padding-top: 5px;
+	padding-right: 55px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	background-color: lightblue;	
+	background-position: -90px -90px;
+	background-repeat: no-repeat;
+}
+
+img.center {
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:-1
+}
+
+body {
+	background-size: 1500px 1200px;
+}
+
+
+
+
+
+</style>
+</body>
+
+</head>
+
+
+
+</html>
